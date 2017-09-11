@@ -22,5 +22,8 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="lib/btrace-agent.jar"/>
+	<classpathentry kind="lib" path="lib/btrace-boot.jar"/>
+	<classpathentry kind="lib" path="lib/btrace-client.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
