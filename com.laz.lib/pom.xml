@@ -61,5 +61,40 @@
     <version>2.4.8</version>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-log4j12</artifactId>
+    <version>1.4.2</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>3.3.0.CR1</version>
+    <exclusions>
+    	<exclusion>
+    		<artifactId>slf4j-api</artifactId>
+    		<groupId>org.slf4j</groupId>
+    	</exclusion>
+    </exclusions>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-c3p0</artifactId>
+    <version>3.3.2.GA</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>5.1.6</version>
+</dependency>
+
+
 	</dependencies>
 </project>

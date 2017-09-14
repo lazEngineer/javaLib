@@ -31,14 +31,14 @@ public class TestJsZip {
 //		checkFile(dir);
 //	}
 	public static void main(String[] args) throws Exception {
-		//new TestJsZip().checkFile(dir);
-		File dir = new File("D:\\learn\\source\\java\\com.laz.lib\\src\\test\\java\\com\\laz\\lib\\js\\login.js");
-		File dir2 = new File("D:\\learn\\source\\java\\com.laz.lib\\src\\test\\java\\com\\laz\\lib\\js\\login_c.js");
-		FileReader in = new FileReader(dir);
-		FileWriter out = new FileWriter(dir2);
-		new TestJsZip().compressor(in,out);
-		in.close();
-		out.close();
+		new TestJsZip().checkFile(new File("D:\\learn\\source\\java\\com.laz.lib\\src\\test\\java\\com\\laz\\lib\\js\\pdf.worker.js"));
+//		File dir = new File("D:\\learn\\source\\java\\com.laz.lib\\src\\test\\java\\com\\laz\\lib\\js\\login.js");
+//		File dir2 = new File("D:\\learn\\source\\java\\com.laz.lib\\src\\test\\java\\com\\laz\\lib\\js\\login_c.js");
+//		FileReader in = new FileReader(dir);
+//		FileWriter out = new FileWriter(dir2);
+//		new TestJsZip().compressor(in,out);
+//		in.close();
+//		out.close();
 	}
 
 	public void checkFile(File file) throws Exception {
