@@ -9,9 +9,7 @@ public class TestOOM {
 	}
 	
 	public static void  main(String[] args) {
-		ArrayList<Obj> list = new ArrayList<Obj>();
-		while(true) {
-			list.add(new Obj());
-		}
+		String s = "1  4		rr";
+		System.out.println(s.split("\\s+"));
 	}
 }

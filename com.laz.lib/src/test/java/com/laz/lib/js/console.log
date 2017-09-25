@@ -1,0 +1,144 @@
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\login.js
+[WARNING] Try to use a single 'var' statement per scope.
+{a:2}))); ---> var  <--- c={};mui.plusReady(function
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\login.js
+[WARNING] The variable k has already been declared in the same scope...
+{console.log(k);var  ---> k <--- =ChatUtil.parse(k)||[]
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\login.js
+[WARNING] Try to use a single 'var' statement per scope.
+){var k=j.detail; ---> var  <--- i=ChatUtil.svt.login;var l
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\login.js
+[WARNING] Try to use a single 'var' statement per scope.
+var i=ChatUtil.svt.login; ---> var  <--- l={name:k.name,password
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\login.js
+[WARNING] The symbol $ is declared but is apparently never used.
+This code can probably be written in a more compact way.
+{mui.toast("输入不能为空");} ---> $ <--- .ajax({url:i||false,
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\login_c.js
+[WARNING] Try to use a single 'var' statement per scope.
+{a:2}))); ---> var  <--- h={};mui.plusReady(function
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\login_c.js
+[WARNING] The variable i has already been declared in the same scope...
+{console.log(i);var  ---> i <--- =ChatUtil.parse(i)||[]
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\login_c.js
+[WARNING] Try to use a single 'var' statement per scope.
+){var n=o.detail; ---> var  <--- p=ChatUtil.svt.login;var m
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\login_c.js
+[WARNING] Try to use a single 'var' statement per scope.
+var p=ChatUtil.svt.login; ---> var  <--- m={name:n.name,password
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\login_c.js
+[WARNING] The symbol $ is declared but is apparently never used.
+This code can probably be written in a more compact way.
+{mui.toast("输入不能为空");} ---> $ <--- .ajax({url:l||false,
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.js
+[ERROR] 1113:51:missing name after . operator
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.js
+[ERROR] 1114:19:syntax error
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.js
+[ERROR] 1118:11:missing ) in parenthetical
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.js
+[ERROR] 1120:6:missing ) in parenthetical
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.js
+[ERROR] 1373:10:invalid property id
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.js
+[ERROR] 1373:11:syntax error
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.js
+[ERROR] 1375:5:syntax error
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.js
+[ERROR] 1379:1:syntax error
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.js
+[ERROR] 6294:28:missing name after . operator
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.js
+[ERROR] 8008:1:syntax error
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.js
+[ERROR] 1:0:Compilation produced 10 syntax errors.
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 1113:51:missing name after . operator
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 1114:19:syntax error
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 1118:11:missing ) in parenthetical
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 1120:6:missing ) in parenthetical
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 1373:10:invalid property id
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 1373:11:syntax error
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 1375:5:syntax error
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 1379:1:syntax error
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 13770:13:missing variable name
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 13831:30:identifier is a reserved word
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 13833:36:identifier is a reserved word
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 13835:24:identifier is a reserved word
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 13838:26:identifier is a reserved word
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 13841:38:identifier is a reserved word
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 13867:30:identifier is a reserved word
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 13869:36:identifier is a reserved word
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 13870:51:missing ; before statement
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 13872:24:identifier is a reserved word
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 13875:26:identifier is a reserved word
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 13880:38:identifier is a reserved word
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 13881:53:missing ; before statement
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 39359:1:syntax error
+
+[FILE] D:\learn\source\java\com.laz.lib\src\test\java\com\laz\lib\js\pdf.worker.js
+[ERROR] 1:0:Compilation produced 22 syntax errors.
+

@@ -20,18 +20,18 @@ import com.yahoo.platform.yui.compressor.JavaScriptCompressor;
 
 public class TestJsZip {
 	static File dir = new File("D:\\learn\\source\\java\\com.laz.lib\\src\\test\\java\\com\\laz\\lib\\js\\login.js");
-	int linebreakpos = -1;
+	int linebreakpos =5000;
 	boolean munge = true;
-	boolean verbose = false;
-	boolean preserveAllSemiColons = false;
-	boolean disableOptimizations = false;
+	boolean verbose = true;
+	boolean preserveAllSemiColons = true;
+	boolean disableOptimizations = true;
 
 //	@Test
 //	public void testMain() throws Exception {
 //		checkFile(dir);
 //	}
 	public static void main(String[] args) throws Exception {
-		new TestJsZip().checkFile(new File("D:\\learn\\source\\java\\com.laz.lib\\src\\test\\java\\com\\laz\\lib\\js\\pdf.worker.js"));
+		new TestJsZip().checkFile(new File("D:\\learn\\source\\java\\com.laz.lib\\src\\test\\java\\com\\laz\\lib\\js\\pdf.js"));
 //		File dir = new File("D:\\learn\\source\\java\\com.laz.lib\\src\\test\\java\\com\\laz\\lib\\js\\login.js");
 //		File dir2 = new File("D:\\learn\\source\\java\\com.laz.lib\\src\\test\\java\\com\\laz\\lib\\js\\login_c.js");
 //		FileReader in = new FileReader(dir);
