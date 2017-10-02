@@ -4,12 +4,14 @@ import javax.jms.Connection;
 import javax.jms.ConnectionFactory;
 import javax.jms.Destination;
 import javax.jms.JMSException;
+import javax.jms.Message;
 import javax.jms.MessageConsumer;
 import javax.jms.Session;
 import javax.jms.TextMessage;
 
 import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
+import org.apache.activemq.command.ActiveMQMessage;
 
 public class JMSConsumerTopic {
 	private static final String USERNAME = ActiveMQConnection.DEFAULT_USER;// 默认连接用户名
@@ -26,8 +28,9 @@ public class JMSConsumerTopic {
 		MessageConsumer messageConsumer;// 消息的消费者
 
 		// 实例化连接工厂
-		connectionFactory = new ActiveMQConnectionFactory(JMSConsumerTopic.USERNAME,
-				JMSConsumerTopic.PASSWORD, JMSConsumerTopic.BROKEURL);
+		connectionFactory = new ActiveMQConnectionFactory(
+				JMSConsumerTopic.USERNAME, JMSConsumerTopic.PASSWORD,
+				JMSConsumerTopic.BROKEURL);
 
 		try {
 			// 通过连接工厂获取连接
@@ -37,18 +40,33 @@ public class JMSConsumerTopic {
 			// 创建session
 			session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 			// 创建一个连接HelloWorld的消息队列
-			destination = session.createTopic("HelloWorld");
+			destination = session
+					.createTopic("ActiveMQ.Advisory.Consumer.Queue.MyTopicDDD");
 			// 创建消息消费者
 			messageConsumer = session.createConsumer(destination);
 
 			while (true) {
-				TextMessage textMessage = (TextMessage) messageConsumer
-						.receive(100000);
-				if (textMessage != null) {
-					System.out.println("收到的消息:" + textMessage.getText());
-				} else {
-					break;
+				 Message msg = messageConsumer
+					.receive(100000);
+				if (msg instanceof ActiveMQMessage) {
+					ActiveMQMessage textMessage = (ActiveMQMessage) messageConsumer
+							.receive(100000);
+					if (textMessage != null) {
+						System.out.println("收到的消息:" + textMessage.toString());
+					} else {
+						break;
+					}
 				}
+				if (msg instanceof TextMessage) {
+					TextMessage textMessage = (TextMessage) messageConsumer
+							.receive(100000);
+					if (textMessage != null) {
+						System.out.println("收到的消息:" + textMessage.getText());
+					} else {
+						break;
+					}
+				}
+
 			}
 
 		} catch (JMSException e) {

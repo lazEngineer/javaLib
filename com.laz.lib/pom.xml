@@ -113,5 +113,20 @@
   <artifactId>activemq-all</artifactId>
   <version>5.15.0</version>
 </dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.ws.commons.axiom/axiom-api -->
+<dependency>
+    <groupId>org.apache.ws.commons.axiom</groupId>
+    <artifactId>axiom-api</artifactId>
+    <version>1.2.7</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.ws.commons.axiom/axiom-impl -->
+<dependency>
+    <groupId>org.apache.ws.commons.axiom</groupId>
+    <artifactId>axiom-impl</artifactId>
+    <version>1.2.7</version>
+</dependency>
+
 	</dependencies>
 </project>
