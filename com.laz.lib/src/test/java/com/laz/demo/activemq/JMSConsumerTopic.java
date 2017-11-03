@@ -31,7 +31,7 @@ public class JMSConsumerTopic {
 		connectionFactory = new ActiveMQConnectionFactory(
 				JMSConsumerTopic.USERNAME, JMSConsumerTopic.PASSWORD,
 				JMSConsumerTopic.BROKEURL);
-
+String[] array = new String[]{"a","b"};
 		try {
 			// 通过连接工厂获取连接
 			connection = connectionFactory.createConnection();
@@ -41,7 +41,7 @@ public class JMSConsumerTopic {
 			session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 			// 创建一个连接HelloWorld的消息队列
 			destination = session
-					.createTopic("ActiveMQ.Advisory.Consumer.Queue.MyTopicDDD");
+					.createTopic("example.MyTopic");
 			// 创建消息消费者
 			messageConsumer = session.createConsumer(destination);
 

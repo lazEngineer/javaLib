@@ -1,0 +1,10 @@
+#macro(link $href $id)
+<a href="$!href"#if($id) id="$id"#end>$bodyContent</a>
+#end
+
+#@link("www.tinygroup.com","x")dd
+#end
+
+#set( $Map = {"banana" : "good", "roast beef" : "bad"}) ## Map
+#set( $a = "banana") ## Map
+$Map[$a]
