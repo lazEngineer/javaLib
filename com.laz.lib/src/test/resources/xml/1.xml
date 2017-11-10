@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:sw="http://www.sunsheen.cn/jfids/ui/web" xml:lang="en"
+	lang="en">
+	<head>
+		<base href="#{sw:getBaseHref(facesContext.externalContext.request)}" />
+		<title>网页开发</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+		<!--兼容ie -->
+		<!--[if IE]> <script src="resource/webpage/ie/matchMedia.js"></script> 
+			<script src="resource/webpage/ie/matchMedia.addListener.js"></script> <script 
+			src="resource/webpage/ie/polyfill.js"></script> <script src="resource/webpage/ie/es5-shim.min.js"></script> 
+			<script src="resource/webpage/ie/html5shiv.min.js"></script> <script src="resource/webpage/ie/addEventListener-polyfill.js"></script> 
+			<![endif] -->
+
+
+
+		<link rel="stylesheet" href="resource/webpage/bootstrap/css/bootstrap.css" />
+
+		<link rel="stylesheet" href="resource/webpage/react/antd.css" />
+
+		<link rel="stylesheet" href="resource/webpage/react/sunsheen.css" />
+
+		<link rel="stylesheet" href="resource/webpage/react/ued.antd.cover.css" />
+
+
+		<script src="resource/webpage/jquery.min.js"></script>
+
+		<script src="resource/webpage/xhtml.js"></script>
+
+		<script src="resource/webpage/react/react-with-addons.js"></script>
+
+		<script src="resource/webpage/react/react-dom.js"></script>
+
+		<script src="resource/webpage/react/antd.js"></script>
+
+		<script src="resource/webpage/react/sunsheen.js"></script>
+
+		<script src="resource/webpage/react/SunSheen_WEB.js"></script>
+
+
+
+
+
+
+
+		<style>
+
+		</style>
+		<style>
+
+		</style>
+		<script>
+			//<![CDATA[
+		
+	//]]>
+		</script>
+
+	</head>
+	<body>
+		<sw:body>
+			<sw:sunsheen.Main id='hk-root'>
+				<sw:div>
+					<sw:antd.Row>
+						<sw:antd.Col style='{{}}'>
+							<sw:sunsheen.Nav id="pJKZQTtRrJ" height="50" a="b"
+								id="aa">
+
+							</sw:sunsheen.Nav>
+
+						</sw:antd.Col>
+
+					</sw:antd.Row>
+
+				</sw:div>
+			</sw:sunsheen.Main>
+		</sw:body>
+	</body>
+	<script type="text/javascript">
+		//<![CDATA[
+			
+		$(document).ready(function() {
+				
+		});
+	//]]>
+	</script>
+</html>
