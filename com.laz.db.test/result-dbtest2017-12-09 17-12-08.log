@@ -1,0 +1,13 @@
+#########################启动测试:-dbType|mysql|-sql|insert into dbtest_0_1 values(?,?)|-sqlcol|1|-threadCount|1|-count|10000##########################
+线程:pool-1-thread-1执行mysql	insert into dbtest_0_1 values(?,?)	10000脚本
+2017-12-09 17:12:09 [数据库性能测试]
+执行脚本:	-dbType|mysql|-sql|insert into dbtest_0_1 values(?,?)|-sqlcol|1|-threadCount|1|-count|10000
+开始时间 :	2017-12-09 17:12:09
+结束时间 :	2017-12-09 17:12:18
+并发数量 :	1
+执行sql:	insert into dbtest_0_1 values(?,?)
+数据列:	1
+测试状态:	success
+耗时 	9.532 s
+#########################测试结束:-dbType|mysql|-sql|insert into dbtest_0_1 values(?,?)|-sqlcol|1|-threadCount|1|-count|10000##########################
+

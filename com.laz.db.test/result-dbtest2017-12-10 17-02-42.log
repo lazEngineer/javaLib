@@ -1,0 +1,21 @@
+#########################启动测试:-dbType|hive|-sql|insert into dbtest_0_1 values(?,?)|-sqlcol|1|-threadCount|1|-count|10000##########################
+线程:pool-1-thread-1执行hive	insert into dbtest_0_1 values(?,?)	10000脚本
+Parameter #1 is unset
+java.sql.SQLException: Parameter #1 is unset
+	at org.apache.hive.jdbc.HivePreparedStatement.updateSql(HivePreparedStatement.java:140)
+	at org.apache.hive.jdbc.HivePreparedStatement.executeUpdate(HivePreparedStatement.java:122)
+	at com.sunsheen.jfids.bigplus.capability.benchmark.db.DBThread.run(DBThread.java:43)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-12-10 17:02:42 [数据库性能测试]
+执行脚本:	-dbType|hive|-sql|insert into dbtest_0_1 values(?,?)|-sqlcol|1|-threadCount|1|-count|10000
+开始时间 :	2017-12-10 17:02:42
+结束时间 :	2017-12-10 17:02:43
+并发数量 :	1
+执行sql:	insert into dbtest_0_1 values(?,?)
+数据列:	1
+测试状态:	success
+耗时 	1.045 s
+#########################测试结束:-dbType|hive|-sql|insert into dbtest_0_1 values(?,?)|-sqlcol|1|-threadCount|1|-count|10000##########################
+

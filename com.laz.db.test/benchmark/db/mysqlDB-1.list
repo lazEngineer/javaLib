@@ -1,0 +1,129 @@
+#mysql 测试脚本   1并发
+#数据库类型   sql  并发     数据量   
+
+#------------------------------------------------1万 -----------------------------------------
+#并发1 列1
+-dbType|mysql|-sql|insert,dbtest_0_1|-sqlcol|1|-threadCount|1|-count|10000
+-dbType|mysql|-sql|update,dbtest_0_1|-sqlcol|1|-threadCount|1|-count|10000
+#-------------------------select 多种情况---------------------------------------
+#一般
+-dbType|mysql|-sql|select,dbtest_0_1|-sqlcol|1|-threadCount|1|-count|10000
+#-------------------------select 多种情况结束---------------------------------------
+-dbType|mysql|-sql|delete,dbtest_0_1|-sqlcol|1|-threadCount|1|-count|10000
+
+
+#并发1 列50
+-dbType|mysql|-sql|insert,dbtest_0_50|-sqlcol|50|-threadCount|1|-count|10000
+-dbType|mysql|-sql|update,dbtest_0_50|-sqlcol|50|-threadCount|1|-count|10000
+#-------------------------select 多种情况---------------------------------------
+#一般
+-dbType|mysql|-sql|select,dbtest_0_50|-sqlcol|50|-threadCount|1|-count|10000
+#-------------------------select 多种情况结束---------------------------------------
+-dbType|mysql|-sql|delete,dbtest_0_50|-sqlcol|50|-threadCount|1|-count|10000
+
+
+#并发1 列100
+-dbType|mysql|-sql|insert,dbtest_0_100|-sqlcol|100|-threadCount|1|-count|10000
+-dbType|mysql|-sql|update,dbtest_0_100|-sqlcol|100|-threadCount|1|-count|10000
+#-------------------------select 多种情况---------------------------------------
+#分组
+-dbType|mysql|-sql|select,dbtest_0_100,group|-sqlcol|100|-threadCount|1|-count|10000
+#-------------------------select 多种情况结束---------------------------------------
+-dbType|mysql|-sql|delete,dbtest_0_100|-sqlcol|100|-threadCount|1|-count|10000
+
+
+
+
+
+
+#----------------------------------10万 ----------------------------------
+#并发1 列1
+-dbType|mysql|-sql|insert,dbtest_0_1|-sqlcol|1|-threadCount|1|-count|100000
+-dbType|mysql|-sql|update,dbtest_0_1|-sqlcol|1|-threadCount|1|-count|100000
+#-------------------------select 多种情况---------------------------------------
+#一般
+-dbType|mysql|-sql|select,dbtest_0_1|-sqlcol|1|-threadCount|1|-count|100000
+#排序
+-dbType|mysql|-sql|select,dbtest_0_1,order|-sqlcol|1|-threadCount|1|-count|100000
+#分组
+-dbType|mysql|-sql|select,dbtest_0_1,group|-sqlcol|1|-threadCount|1|-count|100000
+#-------------------------select 多种情况结束---------------------------------------
+-dbType|mysql|-sql|delete,dbtest_0_1|-sqlcol|1|-threadCount|1|-count|100000
+
+
+#并发1 列50
+-dbType|mysql|-sql|insert,dbtest_0_50|-sqlcol|50|-threadCount|1|-count|100000
+-dbType|mysql|-sql|update,dbtest_0_50|-sqlcol|50|-threadCount|1|-count|100000
+#-------------------------select 多种情况---------------------------------------
+#一般
+-dbType|mysql|-sql|select,dbtest_0_50|-sqlcol|50|-threadCount|1|-count|100000
+#排序
+-dbType|mysql|-sql|select,dbtest_0_50,order|-sqlcol|50|-threadCount|1|-count|100000
+#分组
+-dbType|mysql|-sql|select,dbtest_0_50,group|-sqlcol|50|-threadCount|1|-count|100000
+#-------------------------select 多种情况结束---------------------------------------
+-dbType|mysql|-sql|delete,dbtest_0_50|-sqlcol|50|-threadCount|1|-count|100000
+
+
+#并发1 列100
+-dbType|mysql|-sql|insert,dbtest_0_100|-sqlcol|100|-threadCount|1|-count|100000
+-dbType|mysql|-sql|update,dbtest_0_100|-sqlcol|100|-threadCount|1|-count|100000
+#-------------------------select 多种情况---------------------------------------
+#一般
+-dbType|mysql|-sql|select,dbtest_0_100|-sqlcol|100|-threadCount|1|-count|100000
+#排序
+-dbType|mysql|-sql|select,dbtest_0_100,order|-sqlcol|100|-threadCount|1|-count|100000
+#分组
+-dbType|mysql|-sql|select,dbtest_0_100,group|-sqlcol|100|-threadCount|1|-count|100000
+#-------------------------select 多种情况结束---------------------------------------
+-dbType|mysql|-sql|delete,dbtest_0_100|-sqlcol|100|-threadCount|1|-count|100000
+
+
+#----------------------------------100万 ----------------------------------
+#并发1 列1
+-dbType|mysql|-sql|insert,dbtest_0_1|-sqlcol|1|-threadCount|1|-count|1000000
+-dbType|mysql|-sql|update,dbtest_0_1|-sqlcol|1|-threadCount|1|-count|1000000
+#-------------------------select 多种情况---------------------------------------
+#一般
+-dbType|mysql|-sql|select,dbtest_0_1|-sqlcol|1|-threadCount|1|-count|1000000
+#排序
+-dbType|mysql|-sql|select,dbtest_0_1,order|-sqlcol|1|-threadCount|1|-count|1000000
+#分组
+-dbType|mysql|-sql|select,dbtest_0_1,group|-sqlcol|1|-threadCount|1|-count|1000000
+#-------------------------select 多种情况结束---------------------------------------
+-dbType|mysql|-sql|delete,dbtest_0_1|-sqlcol|1|-threadCount|1|-count|1000000
+
+
+#并发1 列50
+-dbType|mysql|-sql|insert,dbtest_0_50|-sqlcol|50|-threadCount|1|-count|1000000
+-dbType|mysql|-sql|update,dbtest_0_50|-sqlcol|50|-threadCount|1|-count|1000000
+#-------------------------select 多种情况---------------------------------------
+#一般
+-dbType|mysql|-sql|select,dbtest_0_50|-sqlcol|50|-threadCount|1|-count|1000000
+#排序
+-dbType|mysql|-sql|select,dbtest_0_50,order|-sqlcol|50|-threadCount|1|-count|1000000
+#分组
+-dbType|mysql|-sql|select,dbtest_0_50,group|-sqlcol|50|-threadCount|1|-count|1000000
+#-------------------------select 多种情况结束---------------------------------------
+-dbType|mysql|-sql|delete,dbtest_0_50|-sqlcol|50|-threadCount|1|-count|1000000
+
+
+#并发1 列100
+-dbType|mysql|-sql|insert,dbtest_0_100|-sqlcol|100|-threadCount|1|-count|1000000
+-dbType|mysql|-sql|update,dbtest_0_100|-sqlcol|100|-threadCount|1|-count|1000000
+#-------------------------select 多种情况---------------------------------------
+#一般
+-dbType|mysql|-sql|select,dbtest_0_100|-sqlcol|100|-threadCount|1|-count|1000000
+#排序
+-dbType|mysql|-sql|select,dbtest_0_100,order|-sqlcol|100|-threadCount|1|-count|1000000
+#分组
+-dbType|mysql|-sql|select,dbtest_0_100,group|-sqlcol|100|-threadCount|1|-count|1000000
+#-------------------------select 多种情况结束---------------------------------------
+-dbType|mysql|-sql|delete,dbtest_0_100|-sqlcol|100|-threadCount|1|-count|1000000
+
+
+
+
+
+
+

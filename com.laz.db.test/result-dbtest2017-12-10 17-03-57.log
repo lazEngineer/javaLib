@@ -1,0 +1,2 @@
+#########################启动测试:-dbType|hive|-sql|insert into dbtest_0_1 values(?,?)|-sqlcol|1|-threadCount|1|-count|10000##########################
+线程:pool-1-thread-1执行hive	insert into dbtest_0_1 values(?,?)	10000脚本

@@ -1,0 +1,13 @@
+hive 驱动加载失败
+java.lang.NullPointerException
+	at java.util.Properties$LineReader.readLine(Properties.java:434)
+	at java.util.Properties.load0(Properties.java:353)
+	at java.util.Properties.load(Properties.java:341)
+	at com.sunsheen.jfids.bigplus.capability.benchmark.db.util.DBSqlUtils.loadDriver(DBSqlUtils.java:64)
+	at com.sunsheen.jfids.bigplus.capability.benchmark.db.util.DBSqlUtils.loadHivesql(DBSqlUtils.java:46)
+	at com.sunsheen.jfids.bigplus.capability.benchmark.db.util.DBSqlUtils.<clinit>(DBSqlUtils.java:36)
+	at com.sunsheen.jfids.bigplus.capability.benchmark.db.DBBenchmark.clearTable(DBBenchmark.java:108)
+	at com.sunsheen.jfids.bigplus.capability.benchmark.db.DBBenchmark.run(DBBenchmark.java:82)
+	at com.sunsheen.jfids.bigplus.capability.benchmark.db.DBBenchmark.parseTasks(DBBenchmark.java:205)
+	at com.sunsheen.jfids.bigplus.capability.benchmark.db.DBBenchmark.parseScript(DBBenchmark.java:60)
+	at com.sunsheen.jfids.bigplus.capability.benchmark.db.DBBenchmark.main(DBBenchmark.java:48)

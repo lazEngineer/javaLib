@@ -1,0 +1,69 @@
+Error while compiling statement: FAILED: SemanticException [Error 10297]: Attempt to do update or delete on table default.dbtest_0_1 that does not use an AcidOutputFormat or is not bucketed
+org.apache.hive.service.cli.HiveSQLException: Error while compiling statement: FAILED: SemanticException [Error 10297]: Attempt to do update or delete on table default.dbtest_0_1 that does not use an AcidOutputFormat or is not bucketed
+	at org.apache.hive.jdbc.Utils.verifySuccess(Utils.java:267)
+	at org.apache.hive.jdbc.Utils.verifySuccessWithInfo(Utils.java:253)
+	at org.apache.hive.jdbc.HiveStatement.runAsyncOnServer(HiveStatement.java:313)
+	at org.apache.hive.jdbc.HiveStatement.execute(HiveStatement.java:253)
+	at org.apache.hive.jdbc.HiveStatement.executeUpdate(HiveStatement.java:490)
+	at org.apache.hive.jdbc.HivePreparedStatement.executeUpdate(HivePreparedStatement.java:122)
+	at com.sunsheen.jfids.bigplus.capability.benchmark.db.util.DBSqlUtils.executeBySql(DBSqlUtils.java:138)
+	at com.sunsheen.jfids.bigplus.capability.benchmark.db.DBBenchmark.clearTable(DBBenchmark.java:108)
+	at com.sunsheen.jfids.bigplus.capability.benchmark.db.DBBenchmark.run(DBBenchmark.java:82)
+	at com.sunsheen.jfids.bigplus.capability.benchmark.db.DBBenchmark.parseTasks(DBBenchmark.java:205)
+	at com.sunsheen.jfids.bigplus.capability.benchmark.db.DBBenchmark.parseScript(DBBenchmark.java:60)
+	at com.sunsheen.jfids.bigplus.capability.benchmark.db.DBBenchmark.main(DBBenchmark.java:48)
+Caused by: org.apache.hive.service.cli.HiveSQLException: Error while compiling statement: FAILED: SemanticException [Error 10297]: Attempt to do update or delete on table default.dbtest_0_1 that does not use an AcidOutputFormat or is not bucketed
+	at org.apache.hive.service.cli.operation.Operation.toSQLException(Operation.java:380)
+	at org.apache.hive.service.cli.operation.SQLOperation.prepare(SQLOperation.java:206)
+	at org.apache.hive.service.cli.operation.SQLOperation.runInternal(SQLOperation.java:290)
+	at org.apache.hive.service.cli.operation.Operation.run(Operation.java:320)
+	at org.apache.hive.service.cli.session.HiveSessionImpl.executeStatementInternal(HiveSessionImpl.java:530)
+	at org.apache.hive.service.cli.session.HiveSessionImpl.executeStatementAsync(HiveSessionImpl.java:517)
+	at org.apache.hive.service.cli.CLIService.executeStatementAsync(CLIService.java:310)
+	at org.apache.hive.service.cli.thrift.ThriftCLIService.ExecuteStatement(ThriftCLIService.java:530)
+	at org.apache.hive.service.rpc.thrift.TCLIService$Processor$ExecuteStatement.getResult(TCLIService.java:1437)
+	at org.apache.hive.service.rpc.thrift.TCLIService$Processor$ExecuteStatement.getResult(TCLIService.java:1422)
+	at org.apache.thrift.ProcessFunction.process(ProcessFunction.java:39)
+	at org.apache.thrift.TBaseProcessor.process(TBaseProcessor.java:39)
+	at org.apache.hive.service.auth.TSetIpAddressProcessor.process(TSetIpAddressProcessor.java:56)
+	at org.apache.thrift.server.TThreadPoolServer$WorkerProcess.run(TThreadPoolServer.java:286)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.RuntimeException: org.apache.hadoop.hive.ql.parse.SemanticException:Attempt to do update or delete on table default.dbtest_0_1 that does not use an AcidOutputFormat or is not bucketed
+	at org.apache.hadoop.hive.ql.parse.SemanticAnalyzer.getMetaData(SemanticAnalyzer.java:2153)
+	at org.apache.hadoop.hive.ql.parse.SemanticAnalyzer.getMetaData(SemanticAnalyzer.java:1934)
+	at org.apache.hadoop.hive.ql.parse.SemanticAnalyzer.genResolvedParseTree(SemanticAnalyzer.java:11080)
+	at org.apache.hadoop.hive.ql.parse.SemanticAnalyzer.analyzeInternal(SemanticAnalyzer.java:11133)
+	at org.apache.hadoop.hive.ql.parse.SemanticAnalyzer.analyzeInternal(SemanticAnalyzer.java:10807)
+	at org.apache.hadoop.hive.ql.parse.UpdateDeleteSemanticAnalyzer.analyzeInternal(UpdateDeleteSemanticAnalyzer.java:73)
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.analyze(BaseSemanticAnalyzer.java:258)
+	at org.apache.hadoop.hive.ql.parse.UpdateDeleteSemanticAnalyzer.reparseAndSuperAnalyze(UpdateDeleteSemanticAnalyzer.java:462)
+	at org.apache.hadoop.hive.ql.parse.UpdateDeleteSemanticAnalyzer.analyzeDelete(UpdateDeleteSemanticAnalyzer.java:111)
+	at org.apache.hadoop.hive.ql.parse.UpdateDeleteSemanticAnalyzer.analyzeInternal(UpdateDeleteSemanticAnalyzer.java:81)
+	at org.apache.hadoop.hive.ql.parse.BaseSemanticAnalyzer.analyze(BaseSemanticAnalyzer.java:258)
+	at org.apache.hadoop.hive.ql.Driver.compile(Driver.java:512)
+	at org.apache.hadoop.hive.ql.Driver.compileInternal(Driver.java:1317)
+	at org.apache.hadoop.hive.ql.Driver.compileAndRespond(Driver.java:1295)
+	at org.apache.hive.service.cli.operation.SQLOperation.prepare(SQLOperation.java:204)
+	... 15 more
+#########################启动测试:-dbType|hive|-sql|insert into dbtest_0_1 values(?,?)|-sqlcol|1|-threadCount|1|-count|10000##########################
+线程:pool-2-thread-1执行hive	insert into dbtest_0_1 values(?,?)	10000脚本
+Method not supported
+java.sql.SQLFeatureNotSupportedException: Method not supported
+	at org.apache.hive.jdbc.HivePreparedStatement.addBatch(HivePreparedStatement.java:78)
+	at com.sunsheen.jfids.bigplus.capability.benchmark.db.DBThread.run(DBThread.java:57)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-12-10 16:33:17 [数据库性能测试]
+执行脚本:	-dbType|hive|-sql|insert into dbtest_0_1 values(?,?)|-sqlcol|1|-threadCount|1|-count|10000
+开始时间 :	2017-12-10 16:33:17
+结束时间 :	2017-12-10 16:33:18
+并发数量 :	1
+执行sql:	insert into dbtest_0_1 values(?,?)
+数据列:	1
+测试状态:	success
+耗时 	0.177 s
+#########################测试结束:-dbType|hive|-sql|insert into dbtest_0_1 values(?,?)|-sqlcol|1|-threadCount|1|-count|10000##########################
+
