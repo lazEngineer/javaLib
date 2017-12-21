@@ -14,7 +14,7 @@ import org.apache.hadoop.fs.Path;
 public class ReadWriteTest {
 	public static void main(String[] args) throws IOException {
 		Configuration conf = new Configuration();
-		String hdfsuri = "hdfs://172.18.130.115:9000/tmp/1.txt";
+		String hdfsuri = "hdfs://172.18.130.100:8020/user/hive/tpc_ds/call_center.dat";
 		FileSystem fs = FileSystem.get(URI.create(hdfsuri), conf);
 		FSDataInputStream hdfsInStream = fs.open(new Path(hdfsuri));
 

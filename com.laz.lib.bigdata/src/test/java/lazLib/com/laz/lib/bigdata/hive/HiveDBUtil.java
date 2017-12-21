@@ -14,7 +14,7 @@ import java.util.Map;
 
 public class HiveDBUtil {
 	private static String driverName = "org.apache.hive.jdbc.HiveDriver";
-	private static String url = "jdbc:hive2://172.18.130.100:10000/default";
+	private static String url = "jdbc:hive2://172.18.130.108:10000/default";
 	private static String username = "hive";
 	private static String passwd = "hive";
 	private static Connection con;
