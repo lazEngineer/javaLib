@@ -137,6 +137,8 @@ public class Test {
 				table.getRow(row).getCell(col)
 						.setText("row " + row + ", col " + col);
 			}
+			
+			
 		}
 
 		// create and set column widths for all columns in all rows

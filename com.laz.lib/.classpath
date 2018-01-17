@@ -27,5 +27,9 @@
 	<classpathentry kind="lib" path="lib/btrace-boot.jar"/>
 	<classpathentry kind="lib" path="lib/btrace-client.jar"/>
 	<classpathentry kind="lib" path="lib/greenplum.jar"/>
+	<classpathentry kind="lib" path="lib/itext5-itext-pdfa-5.5.12.jar"/>
+	<classpathentry kind="lib" path="lib/itext5-itext-xtra-5.5.12.jar"/>
+	<classpathentry kind="lib" path="lib/itext5-itextpdf-5.5.12.jar"/>
+	<classpathentry kind="lib" path="lib/itext5-xmlworker-5.5.12.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
