@@ -1,23 +1,17 @@
 package com.laz.lib.word.req;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.OutputStream;
 import java.io.StringWriter;
 import java.math.BigInteger;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
 import javax.xml.bind.JAXBElement;
 
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
 import org.docx4j.Docx4J;
 import org.docx4j.TextUtils;
-import org.docx4j.XmlUtils;
 import org.docx4j.convert.out.FOSettings;
 import org.docx4j.dml.wordprocessingDrawing.Inline;
 import org.docx4j.fonts.IdentityPlusMapper;
@@ -25,9 +19,7 @@ import org.docx4j.fonts.Mapper;
 import org.docx4j.fonts.PhysicalFont;
 import org.docx4j.fonts.PhysicalFonts;
 import org.docx4j.jaxb.Context;
-import org.docx4j.model.fields.FieldUpdater;
 import org.docx4j.model.structure.SectionWrapper;
-import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.openpackaging.parts.Part;
@@ -35,24 +27,32 @@ import org.docx4j.openpackaging.parts.WordprocessingML.BinaryPartAbstractImage;
 import org.docx4j.openpackaging.parts.WordprocessingML.HeaderPart;
 import org.docx4j.openpackaging.parts.WordprocessingML.MainDocumentPart;
 import org.docx4j.relationships.Relationship;
-import org.docx4j.services.client.ConversionException;
 import org.docx4j.utils.BufferUtil;
 import org.docx4j.wml.Body;
+import org.docx4j.wml.BooleanDefaultTrue;
+import org.docx4j.wml.CTBookmark;
 import org.docx4j.wml.CTBorder;
+import org.docx4j.wml.Color;
 import org.docx4j.wml.ContentAccessor;
-import org.docx4j.wml.Document;
 import org.docx4j.wml.Drawing;
 import org.docx4j.wml.Hdr;
 import org.docx4j.wml.HdrFtrRef;
 import org.docx4j.wml.HeaderReference;
+import org.docx4j.wml.HpsMeasure;
 import org.docx4j.wml.Jc;
 import org.docx4j.wml.JcEnumeration;
 import org.docx4j.wml.ObjectFactory;
 import org.docx4j.wml.P;
 import org.docx4j.wml.PPr;
+import org.docx4j.wml.PPrBase;
+import org.docx4j.wml.STHint;
+import org.docx4j.wml.U;
+import org.docx4j.wml.UnderlineEnumeration;
 import org.docx4j.wml.PPrBase.PBdr;
 import org.docx4j.wml.PPrBase.Spacing;
+import org.docx4j.wml.ParaRPr;
 import org.docx4j.wml.R;
+import org.docx4j.wml.RFonts;
 import org.docx4j.wml.RPr;
 import org.docx4j.wml.STBorder;
 import org.docx4j.wml.STLineSpacingRule;
@@ -61,8 +61,9 @@ import org.docx4j.wml.Tbl;
 import org.docx4j.wml.TblBorders;
 import org.docx4j.wml.TblPr;
 import org.docx4j.wml.Tc;
+import org.docx4j.wml.Text;
 import org.docx4j.wml.Tr;
-import org.jvnet.jaxb2_commons.ppp.Child;
+import org.junit.Test;
 
 import com.laz.lib.word.freemarker.Docx4JDemo;
 
@@ -76,7 +77,122 @@ public class ReqCreate {
 	public ReqCreate() {
 
 	}
+	/**
+	 * 创建字体
+	 * 
+	 * @param isBlod
+	 *            粗体
+	 * @param isUnderLine
+	 *            下划线
+	 * @param isItalic
+	 *            斜体
+	 * @param isStrike
+	 *            删除线
+	 */
+	public static RPr getRPr(ObjectFactory factory, String fontFamily,
+			String colorVal, String fontSize, STHint sTHint, boolean isBlod,
+			boolean isUnderLine, boolean isItalic, boolean isStrike) {
+		RPr rPr = factory.createRPr();
+		RFonts rf = new RFonts();
+		rf.setHint(sTHint);
+		rf.setAscii(fontFamily);
+		rf.setHAnsi(fontFamily);
+		rPr.setRFonts(rf);
 
+		BooleanDefaultTrue bdt = factory.createBooleanDefaultTrue();
+		rPr.setBCs(bdt);
+		if (isBlod) {
+			rPr.setB(bdt);
+		}
+		if (isItalic) {
+			rPr.setI(bdt);
+		}
+		if (isStrike) {
+			rPr.setStrike(bdt);
+		}
+		if (isUnderLine) {
+			U underline = new U();
+			underline.setVal(UnderlineEnumeration.SINGLE);
+			rPr.setU(underline);
+		}
+
+		Color color = new Color();
+		color.setVal(colorVal);
+		rPr.setColor(color);
+
+		HpsMeasure sz = new HpsMeasure();
+		sz.setVal(new BigInteger(fontSize));
+		rPr.setSz(sz);
+		rPr.setSzCs(sz);
+		return rPr;
+	}
+	@Test
+	public void test() {
+		try {
+			WordprocessingMLPackage wordMLPackage = WordprocessingMLPackage.createPackage();
+			Body body = wordMLPackage.getMainDocumentPart().getContents()
+					.getBody();
+			objectFactory = Context.getWmlObjectFactory();
+			P p = objectFactory.createP();
+			
+			{
+				PPr pr = objectFactory.createPPr();
+				p.setPPr(pr);
+				PPrBase.PStyle style = new PPrBase.PStyle();
+				style.setVal("2");
+				pr.setPStyle(style);
+				
+				PPrBase.Spacing space = new PPrBase.Spacing();
+				space.setLine(BigInteger.valueOf(360L));
+				space.setLineRule(STLineSpacingRule.AUTO);
+				pr.setSpacing(space);
+				
+				ParaRPr rpr = objectFactory.createParaRPr();
+				
+				RFonts fonts = new RFonts();
+				fonts.setCs("Arial");
+				rpr.setRFonts(fonts);
+				
+				
+				
+				HpsMeasure hps = new HpsMeasure();
+				hps.setVal(BigInteger.valueOf(28L));
+				rpr.setSz(hps);
+				
+				rpr.setSzCs(hps);
+				pr.setRPr(rpr);
+				
+				CTBookmark ct = objectFactory.createCTBookmark();
+				ct.setId(BigInteger.valueOf(0));
+				ct.setName("_Toc499828824");
+				
+				CTBookmark ct2 = objectFactory.createCTBookmark();
+				ct2.setId(BigInteger.valueOf(1));
+				ct2.setName("_GoBack");
+				body.getContent().add(p);
+				body.getContent().add(ct);
+			}
+		
+			
+			{
+				R r = objectFactory.createR();
+				RPr rpr =getRPr(objectFactory, "宋体", "000000", "20", STHint.EAST_ASIA, true, false, false, false);
+				r.setRPr(rpr);
+				BooleanDefaultTrue bdt = objectFactory.createBooleanDefaultTrue();
+				rpr.setB(bdt);
+				Text t = objectFactory.createText();
+				t.setValue("项目涉及的用户");
+				r.getContent().add(t);
+				p.getContent().add(r);
+			}
+			
+			
+			wordMLPackage.save(new File("d:\\word\\demo\\test1.xml"));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	private static ObjectFactory objectFactory = new ObjectFactory();
 
 	public void run() {

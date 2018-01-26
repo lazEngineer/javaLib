@@ -163,23 +163,23 @@ public class Docx4JDemo {
 		Text txt = factory.createText();
 		R run = factory.createR();
 
-		txt.setValue("七年级上册Unit2 This is just a test. sectionA测试卷答题卡");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(titleRPr);
-		paragraph.getContent().add(run);
-		t.addObject(paragraph);
+	txt.setValue("七年级上册Unit2 This is just a test. sectionA测试卷答题卡");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(titleRPr);
+	paragraph.getContent().add(run);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		setParagraphSpacing(factory, paragraph, JcEnumeration.CENTER, true,
-				"0", "0", null, null, true, "240", STLineSpacingRule.AUTO);
-		txt = factory.createText();
-		txt.setValue("班级：________    姓名：________");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	setParagraphSpacing(factory, paragraph, JcEnumeration.CENTER, true,
+			"0", "0", null, null, true, "240", STLineSpacingRule.AUTO);
+	txt = factory.createText();
+	txt.setValue("班级：________    姓名：________");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	t.addObject(paragraph);
 
 		paragraph = factory.createP();
 		txt = factory.createText();
@@ -188,298 +188,298 @@ public class Docx4JDemo {
 		run.getContent().add(txt);
 		run.setRPr(boldRPr);
 		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"0", "200", "100", true, "240", STLineSpacingRule.AUTO);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"0", "200", "100", true, "240", STLineSpacingRule.AUTO);
 		t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("1.下列有关仪器用途的说法错误的是(    )");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"0", null, null, true, "240", STLineSpacingRule.AUTO);
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("1.下列有关仪器用途的说法错误的是(    )");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"0", null, null, true, "240", STLineSpacingRule.AUTO);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("A.烧杯用于较多量试剂的反应容器");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"0", null, null, true, "240", STLineSpacingRule.AUTO);
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("A.烧杯用于较多量试剂的反应容器");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"0", null, null, true, "240", STLineSpacingRule.AUTO);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("B.烧杯用于较多量试剂的反应容器");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"0", null, null, true, "240", STLineSpacingRule.AUTO);
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("B.烧杯用于较多量试剂的反应容器");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"0", null, null, true, "240", STLineSpacingRule.AUTO);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("C.烧杯用于较多量试剂的反应容器");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"0", null, null, true, "240", STLineSpacingRule.AUTO);
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("C.烧杯用于较多量试剂的反应容器");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"0", null, null, true, "240", STLineSpacingRule.AUTO);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("D.烧杯用于较多量试剂的反应容器");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"0", null, null, true, "240", STLineSpacingRule.AUTO);
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("D.烧杯用于较多量试剂的反应容器");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"0", null, null, true, "240", STLineSpacingRule.AUTO);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("2.下列实验操作中，正确的是(    ) ");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		// 段前8磅 段后0.5磅
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true,
-				"160", "10", null, null, true, "240", STLineSpacingRule.AUTO);
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("2.下列实验操作中，正确的是(    ) ");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	// 段前8磅 段后0.5磅
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true,
+			"160", "10", null, null, true, "240", STLineSpacingRule.AUTO);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		File file = new File(Docx4JDemo.class.getResource("logo.png").getPath());
-		java.io.InputStream is = new java.io.FileInputStream(file);
-		createImageParagraph(wordMLPackage, factory, paragraph, "img_1", "A.",
-				BufferUtil.getBytesFromInputStream(is), JcEnumeration.LEFT);
+	paragraph = factory.createP();
+	File file = new File(Docx4JDemo.class.getResource("logo.png").getPath());
+	java.io.InputStream is = new java.io.FileInputStream(file);
+	createImageParagraph(wordMLPackage, factory, paragraph, "img_1", "A.",
+			BufferUtil.getBytesFromInputStream(is), JcEnumeration.LEFT);
 
-		file = new File(Docx4JDemo.class.getResource("logo.png").getPath());
-		is = new java.io.FileInputStream(file);
-		createImageParagraph(wordMLPackage, factory, paragraph, "img_2",
-				StringUtils.leftPad("B.", 20),
-				BufferUtil.getBytesFromInputStream(is), JcEnumeration.LEFT);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"0", null, null, true, "240", STLineSpacingRule.AUTO);
-		t.addObject(paragraph);
+	file = new File(Docx4JDemo.class.getResource("logo.png").getPath());
+	is = new java.io.FileInputStream(file);
+	createImageParagraph(wordMLPackage, factory, paragraph, "img_2",
+			StringUtils.leftPad("B.", 20),
+			BufferUtil.getBytesFromInputStream(is), JcEnumeration.LEFT);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"0", null, null, true, "240", STLineSpacingRule.AUTO);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		file = new File(Docx4JDemo.class.getResource("logo.png").getPath());
-		is = new java.io.FileInputStream(file);
-		createImageParagraph(wordMLPackage, factory, paragraph, "img_3", "C.",
-				BufferUtil.getBytesFromInputStream(is), JcEnumeration.LEFT);
+	paragraph = factory.createP();
+	file = new File(Docx4JDemo.class.getResource("logo.png").getPath());
+	is = new java.io.FileInputStream(file);
+	createImageParagraph(wordMLPackage, factory, paragraph, "img_3", "C.",
+			BufferUtil.getBytesFromInputStream(is), JcEnumeration.LEFT);
 
-		file = new File(Docx4JDemo.class.getResource("logo.png").getPath());
-		is = new java.io.FileInputStream(file);
-		createImageParagraph(wordMLPackage, factory, paragraph, "img_4",
-				StringUtils.leftPad("D.", 20),
-				BufferUtil.getBytesFromInputStream(is), JcEnumeration.LEFT);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"0", null, null, true, "240", STLineSpacingRule.AUTO);
-		t.addObject(paragraph);
+	file = new File(Docx4JDemo.class.getResource("logo.png").getPath());
+	is = new java.io.FileInputStream(file);
+	createImageParagraph(wordMLPackage, factory, paragraph, "img_4",
+			StringUtils.leftPad("D.", 20),
+			BufferUtil.getBytesFromInputStream(is), JcEnumeration.LEFT);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"0", null, null, true, "240", STLineSpacingRule.AUTO);
+	t.addObject(paragraph);
 
-		addPageBreak(wordMLPackage, factory, STBrType.PAGE);
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("测试首行缩进");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"0", null, null, true, "240", STLineSpacingRule.AUTO);
-		setParagraphInd(factory, paragraph, JcEnumeration.LEFT, true, "200",
-				false, null);
-		t.addObject(paragraph);
+	addPageBreak(wordMLPackage, factory, STBrType.PAGE);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("测试首行缩进");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"0", null, null, true, "240", STLineSpacingRule.AUTO);
+	setParagraphInd(factory, paragraph, JcEnumeration.LEFT, true, "200",
+			false, null);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("测试悬挂缩进");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"0", null, null, true, "240", STLineSpacingRule.AUTO);
-		setParagraphInd(factory, paragraph, JcEnumeration.LEFT, false, null,
-				true, "200");
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("测试悬挂缩进");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"0", null, null, true, "240", STLineSpacingRule.AUTO);
+	setParagraphInd(factory, paragraph, JcEnumeration.LEFT, false, null,
+			true, "200");
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("测试段前2行单倍行距");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"0", "200", null, true, "240", STLineSpacingRule.AUTO);
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("测试段前2行单倍行距");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"0", "200", null, true, "240", STLineSpacingRule.AUTO);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("测试段后1行单倍行距");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"0", null, "100", true, "240", STLineSpacingRule.AUTO);
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("测试段后1行单倍行距");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"0", null, "100", true, "240", STLineSpacingRule.AUTO);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("测试单倍行距");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"0", null, null, true, "240", STLineSpacingRule.AUTO);
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("测试单倍行距");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"0", null, null, true, "240", STLineSpacingRule.AUTO);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("测试段前2行段后2行单倍行距");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"0", "200", "200", true, "240", STLineSpacingRule.AUTO);
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("测试段前2行段后2行单倍行距");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"0", "200", "200", true, "240", STLineSpacingRule.AUTO);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("测试段前10磅段后10磅段单倍行距");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true,
-				"200", "200", null, null, true, "240", STLineSpacingRule.AUTO);
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("测试段前10磅段后10磅段单倍行距");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true,
+			"200", "200", null, null, true, "240", STLineSpacingRule.AUTO);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("测试段前10磅段后10磅段前2行段后2行单倍行距");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true,
-				"200", "200", "200", "200", true, "240", STLineSpacingRule.AUTO);
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("测试段前10磅段后10磅段前2行段后2行单倍行距");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true,
+			"200", "200", "200", "200", true, "240", STLineSpacingRule.AUTO);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("测试段后12磅单倍行距");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"240", null, null, true, "240", STLineSpacingRule.AUTO);
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("测试段后12磅单倍行距");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"240", null, null, true, "240", STLineSpacingRule.AUTO);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("测试单倍行距");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"0", null, null, true, "240", STLineSpacingRule.AUTO);
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("测试单倍行距");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"0", null, null, true, "240", STLineSpacingRule.AUTO);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("测试行距300[实际为多倍行距1.25]");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"0", null, null, true, "300", STLineSpacingRule.AUTO);
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("测试行距300[实际为多倍行距1.25]");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"0", null, null, true, "300", STLineSpacingRule.AUTO);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("测试1.5倍行距");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"0", null, null, true, "360", STLineSpacingRule.AUTO);
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("测试1.5倍行距");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"0", null, null, true, "360", STLineSpacingRule.AUTO);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("测试2倍行距");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"0", null, null, true, "480", STLineSpacingRule.AUTO);
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("测试2倍行距");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"0", null, null, true, "480", STLineSpacingRule.AUTO);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("测试最小值 12磅");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"0", null, null, true, "240", STLineSpacingRule.AT_LEAST);
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("测试最小值 12磅");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"0", null, null, true, "240", STLineSpacingRule.AT_LEAST);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("测试固定值12磅");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"0", null, null, true, "240", STLineSpacingRule.EXACT);
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("测试固定值12磅");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"0", null, null, true, "240", STLineSpacingRule.EXACT);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("测试固定值13磅");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"0", null, null, true, "260", STLineSpacingRule.EXACT);
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("测试固定值13磅");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"0", null, null, true, "260", STLineSpacingRule.EXACT);
+	t.addObject(paragraph);
 
-		paragraph = factory.createP();
-		txt = factory.createText();
-		txt.setValue("测试多倍行距3倍");
-		run = factory.createR();
-		run.getContent().add(txt);
-		run.setRPr(fontRPr);
-		paragraph.getContent().add(run);
-		setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
-				"0", null, null, true, "720", STLineSpacingRule.AUTO);
-		t.addObject(paragraph);
+	paragraph = factory.createP();
+	txt = factory.createText();
+	txt.setValue("测试多倍行距3倍");
+	run = factory.createR();
+	run.getContent().add(txt);
+	run.setRPr(fontRPr);
+	paragraph.getContent().add(run);
+	setParagraphSpacing(factory, paragraph, JcEnumeration.LEFT, true, "0",
+			"0", null, null, true, "720", STLineSpacingRule.AUTO);
+	t.addObject(paragraph);
 	}
 
 	public void createNormalTableTest(WordprocessingMLPackage wordMLPackage,
