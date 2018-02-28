@@ -21,7 +21,7 @@ public class LocalWCMain extends Configured implements Tool {
 		// 创建job对象
 		Job job = Job.getInstance(new Configuration());
 		// 指定程序的入口
-		job.setJarByClass(WordCount.class);
+		job.setJarByClass(WCMain.class);
 
 		// 指定自定义的Mapper阶段的任务处理类
 		job.setMapperClass(WCMapper.class);
