@@ -5,9 +5,7 @@ import java.util.Arrays;
 
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
-import org.apache.hadoop.mrunit.mapreduce.MapDriver;
 import org.apache.hadoop.mrunit.mapreduce.ReduceDriver;
-import org.com.sunsheen.bigdata.hadoop.test.mapreduce.WCMapper;
 import org.com.sunsheen.bigdata.hadoop.test.mapreduce.WCReducer;
 import org.junit.Test;
 

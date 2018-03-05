@@ -1,0 +1,3 @@
+Demo1 通过Arvo Json模式进行数据序列化反序列化操作
+Demo2 结合HDFS简单进行小文件处理
+Demo3 结合MapReducer进行分析处理

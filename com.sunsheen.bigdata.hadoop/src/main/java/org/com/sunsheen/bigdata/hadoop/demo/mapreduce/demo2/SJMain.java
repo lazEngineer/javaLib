@@ -4,14 +4,11 @@ import java.io.IOException;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
-import org.com.sunsheen.bigdata.hadoop.test.mapreduce.WCMapper;
-import org.com.sunsheen.bigdata.hadoop.test.mapreduce.WCReducer;
-import org.com.sunsheen.bigdata.hadoop.test.mapreduce.WordCount;
+import org.com.sunsheen.bigdata.hadoop.demo.mapreduce.demo2.SJMapper;
 
 public class SJMain {
 	public static void main(String[] args) throws IOException,

@@ -4,13 +4,13 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>sunsheen</groupId>
-    <artifactId>com.sunsshen.bigdata</artifactId>
+    <artifactId>com.sunsheen.bigdata</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <groupId>sunsheen</groupId>
-  <artifactId>com.sunsshen.bigdata.zookeeper</artifactId>
+  <artifactId>com.sunsheen.bigdata.zookeeper</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>com.sunsshen.bigdata.zookeeper</name>
+  <name>com.sunsheen.bigdata.zookeeper</name>
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

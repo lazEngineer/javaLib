@@ -192,7 +192,6 @@ public class HiveDBUtil {
 		ResultSet rs = stmt.executeQuery(sql);
 		int col = rs.getMetaData().getColumnCount();
 		ResultSetMetaData rsmd = rs.getMetaData();
-		System.out.println("============================");
 		List records = new ArrayList();
 		while (rs.next()) {
 			Map<String, String> valueMap = new LinkedHashMap<String, String>();

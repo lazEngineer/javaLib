@@ -25,24 +25,23 @@ public class Demo5 {
 
 		FileStatus[] files = fileSystem.listStatus(new Path("/user"));
 		for (FileStatus file : files) {
-			printFile(fileSystem,file);
-			
+			printFile(fileSystem, file);
+		}
+	}
+
+	private static void printFile(FileSystem fileSystem, FileStatus file)
+			throws FileNotFoundException, IOException {
+		System.out.print("文件名:" + file.getPath().getName());
+		System.out.print("\t是否目录：" + file.isDirectory());
+		System.out.print("\t拥有者：" + file.getOwner());
+		System.out.print("\t文件大小：" + (double) file.getLen() / 1024 + "kb");
+		System.out.print("\n");
+		if (file.isDirectory()) {
+			for (FileStatus f : fileSystem.listStatus(file.getPath())) {
+				printFile(fileSystem, f);
+			}
 		}
 
 	}
 
-	private static void printFile(FileSystem fileSystem, FileStatus file) throws FileNotFoundException, IOException {
-		System.out.print("文件名:"+file.getPath().getName());
-		System.out.print("\t是否目录：" + file.isDirectory());
-		System.out.print("\t拥有者：" + file.getOwner());
-		System.out.print("\t文件大小：" + (double)file.getLen()/1024+"kb");
-		System.out.print("\n");
-		if (file.isDirectory()) {
-			for (FileStatus f:fileSystem.listStatus(file.getPath())) {
-				printFile(fileSystem,f);
-			}
-		} 
-		
-		
-	}
 }

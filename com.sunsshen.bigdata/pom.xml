@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>sunsheen</groupId>
-  <artifactId>com.sunsshen.bigdata</artifactId>
+  <artifactId>com.sunsheen.bigdata</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>com.sunsshen.bigdata</name>
+  <name>com.sunsheen.bigdata</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -33,8 +33,48 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+   <build>  
+	    <plugins>  
+	  
+	        <plugin>  
+	            <groupId>org.apache.maven.plugins</groupId>  
+	            <artifactId>maven-jar-plugin</artifactId>  
+	            <version>2.6</version>  
+	            <configuration>  
+	                <archive>  
+	                    <manifest>  
+	                        <addClasspath>false</addClasspath>  
+	                        <classpathPrefix>lib/</classpathPrefix>  
+	                        <mainClass>org.com.sunsheen.bigdata.hadoop.demo.mapreduce.demo1.WCMain</mainClass>  
+	                    </manifest>  
+	                </archive>  
+	            </configuration>  
+	        </plugin>  
+	        <plugin>  
+	            <groupId>org.apache.maven.plugins</groupId>  
+	            <artifactId>maven-dependency-plugin</artifactId>  
+	            <version>2.10</version>  
+	            <executions>  
+	                <execution>  
+	                    <id>copy-dependencies</id>  
+	                    <phase>package</phase>  
+	                    <goals>  
+	                        <goal>copy-dependencies</goal>  
+	                    </goals>  
+	                    <configuration>  
+	                        <outputDirectory>${project.build.directory}/lib</outputDirectory>  
+	                    </configuration>  
+	                </execution>  
+	            </executions>  
+	        </plugin>  
+	  
+	    </plugins>  
+	</build>  
   <modules>
-  	<module>com.sunsshen.bigdata.zookeeper</module>
-    <module>com.sunsheen.bigdata.hadoop</module>
+    <module>com.sunsheen.bigdata.sqoop</module>
+    <module>com.sunsheen.bigdata.flume</module>
+    <module>com.sunsheen.bigdata.zookeeper</module>
+	    <module>com.sunsheen.bigdata.hadoop</module>
+	    <module>com.sunsheen.bigdata.avro</module>
   </modules>
 </project>

@@ -10,9 +10,6 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
-import org.com.sunsheen.bigdata.hadoop.test.mapreduce.WCMapper;
-import org.com.sunsheen.bigdata.hadoop.test.mapreduce.WCReducer;
-import org.com.sunsheen.bigdata.hadoop.test.mapreduce.WordCount;
 
 public class SJLocalMain extends Configured implements Tool {
 

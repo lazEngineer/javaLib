@@ -1,0 +1,12 @@
+{
+	"type":"record",
+	"name":"Student",
+	"fields":[
+		{"name":"SID","type":"int"},
+		{"name":"Name","type":"string"},
+		{"name":"Dept","type":"string"},
+		{"name":"Phone","type":"string"},
+		{"name":"Age","type":"int"}
+	]
+
+}

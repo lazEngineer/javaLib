@@ -1,0 +1,19 @@
+Demo1  自定义客服端写入flume数据
+	example.conf配置 ：
+		a1.channels = c1
+		a1.sources = r1
+		a1.sinks = k1
+		
+		a1.channels.c1.type = memory
+		
+		a1.sources.r1.channels = c1
+		a1.sources.r1.type = avro
+		# For using a thrift source set the following instead of the above line.
+		# a1.source.r1.type = thrift
+		a1.sources.r1.bind = 0.0.0.0
+		a1.sources.r1.port = 41414
+		
+		a1.sinks.k1.channel = c1
+		a1.sinks.k1.type = logger
+	启动：
+		flume-ng agent --conf ../conf --conf-file example.conf --name a1 -Dflume.root.logger=INFO.console
