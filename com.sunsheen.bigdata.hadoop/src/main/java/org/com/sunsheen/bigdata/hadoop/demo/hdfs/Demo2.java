@@ -12,7 +12,6 @@ import org.apache.hadoop.fs.FSDataInputStream;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IOUtils;
-import org.com.sunsheen.bigdata.hadoop.test.Constants;
 
 /**
  * Hadoop文件下载

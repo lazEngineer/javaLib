@@ -44,9 +44,10 @@ public class HbaseTest {
         Configuration conf = HBaseConfiguration.create();
 
         // 设置连接参数：HBase数据库所在的主机IP
-        conf.set("hbase.zookeeper.quorum", "172.18.130.107,172.18.130.108,172.18.130.109");
+        conf.set("hbase.zookeeper.quorum", "store01.hdp,store02.hdp,store03.hdp");
         // 设置连接参数：HBase数据库使用的端口
         conf.set("hbase.zookeeper.property.clientPort", "2181");
+        conf.set("zookeeper.znode.parent", "/hbase-unsecure");
 
         // 取得一个数据库连接对象
         connection = ConnectionFactory.createConnection(conf);
@@ -68,28 +69,32 @@ public class HbaseTest {
 
         // 新建一个数据表表名对象
         TableName tableName = TableName.valueOf(tableNameString);
+        try {
+        	 // 如果需要新建的表已经存在
+            if(admin.tableExists(tableName)){
 
-        // 如果需要新建的表已经存在
-        if(admin.tableExists(tableName)){
+                System.out.println("表已经存在！");
+            }
+            // 如果需要新建的表不存在
+            else{
 
-            System.out.println("表已经存在！");
+                // 数据表描述对象
+                HTableDescriptor hTableDescriptor = new HTableDescriptor(tableName);
+
+                // 列族描述对象
+                HColumnDescriptor family= new HColumnDescriptor("base");;
+
+                // 在数据表中新建一个列族
+                hTableDescriptor.addFamily(family);
+
+                // 新建数据表
+                admin.createTable(hTableDescriptor);
+            }
+
+        }catch(Exception e) {
+        	e.printStackTrace();
         }
-        // 如果需要新建的表不存在
-        else{
-
-            // 数据表描述对象
-            HTableDescriptor hTableDescriptor = new HTableDescriptor(tableName);
-
-            // 列族描述对象
-            HColumnDescriptor family= new HColumnDescriptor("base");;
-
-            // 在数据表中新建一个列族
-            hTableDescriptor.addFamily(family);
-
-            // 新建数据表
-            admin.createTable(hTableDescriptor);
-        }
-
+       
         System.out.println("---------------创建表 END-----------------");
     }
 

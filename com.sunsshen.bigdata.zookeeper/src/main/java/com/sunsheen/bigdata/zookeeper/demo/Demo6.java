@@ -18,7 +18,7 @@ public class Demo6 extends ZookeeperMain{
 				for(int i=0;i<level;i++) {
 					System.out.print(" ");
 				}
-				System.out.print(child);
+					System.out.print(child);
 				System.out.println();
 				if (!path.equals("/")) {
 					list(path+"/"+child,level++);
